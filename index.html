@@ -4,38 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/dc092e1ceb.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/dc092e1ceb.js" crossorigin="anonymous"></script>
+    <script src="app.js" defer></script>
     <title>Aarambha Intern</title>
 </head>
 <body>
-    <nav>
+    <div class="navbar">
         <div class="logo">
-            <H2>Logo</H2>
+            <h1>LOGO</h1>
         </div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li class="dropdown"><a href="#">Gallery <i class="fas fa-caret-down"></i></a>
-                <ul class="drop-menu">
-                    <li><a href="#">Galler One</a></li>
-                    <li><a href="#">Gallery Two</a></li>                   
-                    <li><a href="#">Gallery Three</a></li>                   
-                </ul>
-            </li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-        <div class="burger-menu" onclick="myBurgerMenu()">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+        <a href="#" class="burger-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li class="dropdown"><a href="#">Gallery <i class="fas fa-caret-down"></i></a>
+                    <ul class="drop-ctn">
+                        <li><a href="#">Gallery One</a></li>
+                        <li><a href="#">Gallery Two</a></li>
+                        <li><a href="#">Gallery Three</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
-    </nav> 
-
-    <section>
-        <h1>Responsive navbar</h1>
-    </section>
-    
-    <script src="app.js"></script>
+    </div>
+    <div class="container">
+        <h1>Responsive Front End For The Navigation Bar</h1>
+        <p>Using HTML, CSS and JAVASCRIPT</p>
+    </div>
 </body>
 </html>

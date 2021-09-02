@@ -1,8 +1,6 @@
-function myBurgerMenu() {
-    var x = document.getElementById("nav-links");
-    if (x.style.display === "block") {
-      x.style.display = "none";
-    } else {
-      x.style.display = "block";
-    }
-  }
+const burgerMenu = document.getElementsByClassName('burger-menu')[0]
+const navLinks = document.getElementsByClassName('nav-links')[0]
+
+burgerMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active')
+})
