@@ -14,6 +14,8 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: fixed;
+    width: 100%;
 }
 
 .logo {
@@ -22,6 +24,11 @@
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
     color: #EDEDED;
+}
+
+.logo img {
+    margin-top: 2.5px;
+    height: 35px;
 }
 
 .nav-links ul {
@@ -42,9 +49,15 @@
     color: #EDEDED;
     padding: 12px 12px;
     display: block;
+    margin-right: 5px;
 }
 
-.nav-links li a:hover {
+.nav-links li a.active{
+    border-radius: 5px;
+    background-color: #93B5C6; 
+}
+
+.nav-links li a:hover{
     border-radius: 5px;
     background-color: #93B5C6;
     color: black;
@@ -62,7 +75,7 @@
     display: none;
     position: absolute;
     background-color: #C8C6C6;
-    min-width: 160px;
+    min-width: 170px;
     top: 7.5vh;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
 }
@@ -121,6 +134,66 @@
     font-weight: bold;
 }
 
+
+/* Home Page Start */
+#home {
+    height: 100vh;
+}
+/* Home Page End */
+
+/* About Us Page Start */
+#about {
+    background-color: silver;
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    margin-top: 70px;
+    padding-top: 20px;
+    background-color: white;
+    height: 70%;
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 20px 5px 30px rgb(156, 151, 151);
+}
+
+.main p {
+    font-size: 40px;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.team {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+.team2 img{
+    object-fit: cover;
+}
+
+.team1 img, .team2 img{
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.team1 p, .team2 p {
+    margin-top: 8px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.team1 img:hover, .team2 img:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+/* About Page End */
+
+
 @media (max-width: 768px) {
     .burger-menu{
         display: flex;
@@ -177,4 +250,39 @@
         font-size: 20px ;
         margin: 0 30px;
     }
+
+    #about {
+        display: flex;
+        height: 115vh;
+    }
+
+    .team {
+        display: flex;
+    }
+
+    .team .team1 {
+        align-items: center;
+    }
+
+    #about .main {
+        height: 560px;
+    }
+
+    #about .main div p {
+        font-size: 25px;
+    }
+
+    #about .team {
+        flex-direction: column;
+    }
+
+    #about .team img {
+        margin-left: 30%;
+    }
+
+    .team .team1 p, .team .team2 p {
+        font-size: 16px !important;
+    }
+
+
 }

@@ -12,7 +12,9 @@
 <body>
     <div class="navbar">
         <div class="logo">
-            <h1>LOGO</h1>
+            <a href="#home">
+                <img src="/Image/logo.png" alt="logo">
+            </a>
         </div>
         <a href="#" class="burger-menu">
             <span class="bar"></span>
@@ -21,22 +23,43 @@
         </a>
         <div class="nav-links">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li class="dropdown"><a href="#">Gallery <i class="fas fa-caret-down"></i></a>
+                <li><a href="#home" class="active">Home</a></li>
+                <li class="dropdown"><a href="#gallery">Gallery <i class="fas fa-caret-down"></i></a>
                     <ul class="drop-ctn">
                         <li><a href="#">Gallery One</a></li>
                         <li><a href="#">Gallery Two</a></li>
                         <li><a href="#">Gallery Three</a></li>
                     </ul>
                 </li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </div>
-    <div class="container">
+    <div id="home" class="container">
         <h1>Responsive Front End For The Navigation Bar</h1>
         <p>Using HTML, CSS and JAVASCRIPT</p>
+    </div>
+    <!-- <div id="gallery" class="container"> 
+        <h1>This is Gallery</h1>
+    </div> -->
+    <div id="about" class="container">
+        <div class="main">
+            <div>            
+                <p>Our Team Members</p>
+            </div>
+            <div class="team">
+                <div class="team1">
+                    <img class="image" src="/Image/kush.png" alt="Kushal" style="width: 150px;">
+                    <p>Kushal Shrestha</p>
+                </div>
+                <div class="team2">
+                    <img src="/Image/alu.jfif" alt="Alisha" style="height: 200px; width: 150px;">
+                    <p>Alisha Shrestha</p>
+                </div>
+                
+            </div>
+        </div>
     </div>
 </body>
 </html>
