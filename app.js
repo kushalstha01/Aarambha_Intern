@@ -1,22 +1,15 @@
 //active class //
-// const currentLoaction = location.href;
-// const menuItem = document.querySelectorAll("a");
-// const menuLength = menuItem.length
+let ul = document.querySelector('ul');
+let li = document.querySelectorAll('li');
 
-// for (let i=0; i<menuLength; i++) {
-//     if (menuItem[i].href === currentLoaction) {
-//         menuItem[i].className = "active"
-//     }
-// }
-// const navActive = document.querySelector("navbar").querySelectorAll("a");
+li.forEach(el => {
+    el.addEventListener('click', function() {
+        ul.querySelector('.actNav').classList.remove('actNav');
 
-// navActive.forEach(element => {
-//     element.addEventListener('click', function() {
-//         navActive.forEach(nav=>nav.classList.remove("active"))
+        el.classList.add('actNav');
+    });
+});
 
-//         this.classList.add("active");
-//     })
-// })
 
 // burger menu //
 const burgerMenu = document.getElementsByClassName('burger-menu')[0]

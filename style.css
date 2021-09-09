@@ -63,6 +63,11 @@
     color: black;
 }
 
+.actNav {
+    background-color: #93B5C6;
+    border-radius: 5px;
+}
+
 .dropdown {
     position: relative;
 }
@@ -145,46 +150,48 @@
 #about {
     background-color: silver;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
 .main {
-    margin-top: 70px;
-    padding-top: 20px;
     background-color: white;
-    height: 70%;
-    width: 80%;
+    height: 65%;
+    width: 70%;
     border-radius: 20px;
     box-shadow: 20px 5px 30px rgb(156, 151, 151);
 }
 
-.main p {
-    font-size: 40px;
+.text p {
+    margin: 25px auto;
+    font-size: 35px;
     letter-spacing: 4px;
-    font-weight: bold;
 }
 
 .team {
+    margin-top: 50px;
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 40px;
 }
 
-.team2 img{
-    object-fit: cover;
-}
-
-.team1 img, .team2 img{
-    border-radius: 15px;
+.team2, .team1 {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team1 img, .team2 img {
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 5px 5px 25px rgb(156, 151, 151);
+
 }
 
 .team1 p, .team2 p {
-    margin-top: 8px;
-    font-size: 15px;
+    margin-top: 10px;
+    font-size: 16px;
     letter-spacing: 1px;
-    font-weight: bold;
 }
 
 .team1 img:hover, .team2 img:hover {
@@ -223,12 +230,17 @@
         text-align: center;
     }
 
-    .nav-links li a {
+    .nav-links li {
         margin: 10px;
     }
 
     .nav-links.active {
         display: block;
+    }
+
+    .actNav {
+        background-color: #93B5C6;
+        border-radius: 5px;
     }
 
     .drop-ctn {
@@ -247,42 +259,25 @@
     }
 
     .container p {
-        font-size: 20px ;
+        font-size: 20px;
         margin: 0 30px;
     }
 
-    #about {
-        display: flex;
-        height: 115vh;
+    /* About page start */
+    .main {
+        width: 90%;
+        height: 60%;
     }
 
-    .team {
-        display: flex;
+    .text p {
+        font-size: 25px !important;
+        margin: 25px;
     }
 
-    .team .team1 {
-        align-items: center;
+    .team p {
+        margin-top: 10px;
+        font-size: 14px;
     }
-
-    #about .main {
-        height: 560px;
-    }
-
-    #about .main div p {
-        font-size: 25px;
-    }
-
-    #about .team {
-        flex-direction: column;
-    }
-
-    #about .team img {
-        margin-left: 30%;
-    }
-
-    .team .team1 p, .team .team2 p {
-        font-size: 16px !important;
-    }
-
+    /* About page end */
 
 }
