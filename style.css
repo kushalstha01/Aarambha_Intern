@@ -16,6 +16,7 @@
     justify-content: space-around;
     position: fixed;
     width: 100%;
+    z-index: 100;
 }
 
 .logo {
@@ -120,12 +121,16 @@
     border-radius: 10px;
 }
 
-.container {
+.container1{
+    height: 110vh;
+}
+
+.container2 {
     background-color: #F3F1F5;
     height: 92vh;
 }
 
-.container h1 {
+/* .container h1 {
     text-align: center;
     padding-top: 30vh;
     font-family: 'Allison', cursive;
@@ -137,13 +142,101 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 30px;
     font-weight: bold;
-}
+} */
 
 
 /* Home Page Start */
 #home {
-    height: 100vh;
+    height: 180vh;
 }
+
+/* Carousel Start */
+.carousel-container {
+    padding-top: 8vh;
+    position: relative;
+    /* display: flex; */
+}
+
+.carousel {
+    display: none;
+}
+
+/* .fade {
+    display: block;
+} */
+
+.carousel-number-text {
+    position: absolute;
+    top: 55px;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    border-radius: 0 3px 3px 0;
+}
+
+.next, .previous {
+    position: absolute;
+    top: 50%;
+    font-size: 35px;
+    font-weight: 900;
+    padding: 15px;
+    padding-right: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transform: translateY(-50%);
+    color: white;
+    user-select: none;
+}
+
+.previous {
+    padding-left: 20px;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.previous:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.carousel-text {
+    position: absolute;
+    font-size: 80px;
+    text-align: center;
+    font-family: 'Allison', cursive;
+    margin-left: 20%;
+    width: 60%;
+    bottom: 10%;
+    padding: 50px;
+    color: white;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.dot-container {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: 0 3px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    transition: 0.6s ease;
+}
+
+.dot:hover, .activeCarousel {
+    background-color: white;
+}
+
+
 /* Home Page End */
 
 /* About Us Page Start */
@@ -166,6 +259,7 @@
     margin: 25px auto;
     font-size: 35px;
     letter-spacing: 4px;
+    text-align: center;
 }
 
 .team {
@@ -253,12 +347,12 @@
         margin: 0;
     }
 
-    .container h1 {
+    .container2 h1 {
         font-size: 60px ;
         margin: 0 30px;
     }
 
-    .container p {
+    .container2 p {
         font-size: 20px;
         margin: 0 30px;
     }
@@ -280,4 +374,26 @@
     }
     /* About page end */
 
+    /* Carousel */
+    .carousel-text {
+        font-size: 40px;
+        width: 80%;
+        padding: 15px;
+        margin-left: 10%;
+        bottom: 60px;
+    }
+
+    .dot {
+        height: 15px;
+        width: 15px;
+    }
+
+    .next , .previous {
+        font-size: 30px;
+    }
+
+    .carousel img {
+        width: 100% !important;
+        height: 60vh !important;
+    }
 }
