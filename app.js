@@ -1,15 +1,32 @@
 //active class //
-let ul = document.querySelector('ul');
-let li = document.querySelectorAll('li');
+var header = document.getElementById("active-nav");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
 
-li.forEach(el => {
-    el.addEventListener('click', function() {
-        ul.querySelector('.actNav').classList.remove('actNav');
-
-        el.classList.add('actNav');
-    });
-});
-
+// Dropdown
+function myDropdownFun() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropdown-btn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-ctn");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
 
 // Carosel 
 var carouselIndex = 1;
@@ -38,11 +55,3 @@ function carousel(n) {
     slides[carouselIndex-1].style.display = "block";  
     dot[carouselIndex-1].className += " activeCarousel";
 }
-
-// burger menu //
-const burgerMenu = document.getElementsByClassName('burger-menu')[0]
-const navLinks = document.getElementsByClassName('nav-links')[0]
-
-burgerMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('active')
-})
